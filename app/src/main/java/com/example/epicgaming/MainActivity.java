@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
                 armsPosition -=1;
                 updateArms();
             };
+            Toast.makeText(this, "left", Toast.LENGTH_LONG).show();
         });
         findViewById(R.id.btnRight).setOnClickListener(v -> {
             // press right button
@@ -37,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
                 armsPosition +=1;
                 updateArms();
             };
+            Toast.makeText(this, "right", Toast.LENGTH_LONG).show();
         });
         findViewById(R.id.btnReset).setOnClickListener(v -> {
             // press reset button
