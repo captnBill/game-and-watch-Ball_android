@@ -17,7 +17,7 @@ public class Ball {
     protected int row; //on which row the ball is moving
     protected boolean goingRight; //ball's current direction
 
-    public Ball(int row, float speed){
+    public Ball(int row){
         Random random = new Random();
         this.row = row;
 
@@ -25,8 +25,14 @@ public class Ball {
         else if (row==2) { this.range = 10 ;}
         else if (row==3) { this.range = 8  ;}
 
-        this.position = random.nextInt(range-4)+2;
-        this.goingRight = true;
+        if(random.nextInt(2)==0){
+            this.position = random.nextInt(range-5)+2;
+            this.goingRight = true;
+        }else{
+            this.position = random.nextInt(range-3)+3;
+            this.goingRight = false;
+        }
+
     }
 
     public int getPosition() {
